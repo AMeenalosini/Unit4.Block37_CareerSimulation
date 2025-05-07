@@ -1,0 +1,24 @@
+{
+  "name": "unit4.block37_careersimulation",
+  "version": "1.0.0",
+  "description": "Database Schema",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "nodemon server/index.js",
+    "seed": "node server/seed.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0",
+    "pg": "^8.15.6",
+    "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
