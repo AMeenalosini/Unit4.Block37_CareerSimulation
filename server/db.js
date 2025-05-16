@@ -1,3 +1,4 @@
+require("dotenv").config();
 const pg = require('pg');
 const client = new pg.Client(process.env.DATABASE_URL || 'postgres://localhost/ecommerce_db');
 const uuid = require('uuid');
@@ -5,6 +6,17 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const JWT = process.env.JWT || 'shhh';
 //require("dotenv");
+
+const connection = {
+  connectionString:
+    process.env.DATABASE_URL || "postgres://ecommerce_db",
+  ssl: { rejectUnauthorized: false },
+};
+const client = new pg.Client(
+  process.env.DATABASE_URL
+    ? connection
+    : "postgres://localhost/ecommerce_db"
+);
 
 
 //CREATE TABLES
