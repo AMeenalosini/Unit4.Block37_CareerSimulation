@@ -1,3 +1,4 @@
+require("dotenv").config();
 const {
     client,
     createUsers,
@@ -21,9 +22,11 @@ const {
 
   const express = require('express');
   const morgan = require("morgan");
+  const cors = require("cors");
 
   const app = express();
   app.use(express.json());
+  server.use(cors());
 
   client.connect();
   
